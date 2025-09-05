@@ -1,5 +1,4 @@
 import pandas as pd
-# from openpyxl import load_workbook
 
 # Read raw data
 df = pd.read_excel("employees_raw.xlsx", sheet_name="Data")
