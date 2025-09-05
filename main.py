@@ -6,6 +6,12 @@ df = pd.read_excel("employees_raw.xlsx", sheet_name="Data")
 def team_merge(teams):
     return "Multiple Teams" if len(set(teams)) > 1 else list(teams)[0]
 
+print(df.columns.tolist())
+print(df.columns[4])
+
+cell_value = df.iloc[4, 4]
+print("Value at E5:", cell_value)
+
 result = df.groupby("Employee ID").agg({
     "Name": "first",
     "Region": "first",
@@ -15,4 +21,4 @@ result = df.groupby("Employee ID").agg({
 }).reset_index()
 
 # Save cleaned sheet
-result.to_excel("employees_cleaned.xlsx", index=1)
+result.to_excel("employees_cleaned.xlsx", index=False)
