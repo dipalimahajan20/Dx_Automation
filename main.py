@@ -1,5 +1,4 @@
 import pandas as pd
-
 # Read raw data
 df = pd.read_excel("employees_raw.xlsx", sheet_name="Data")
 
